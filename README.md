@@ -2,6 +2,12 @@
 
 人车目标检测项目
 
+### 使用方法
+
+- datasets文件夹 : 数据集
+- cars_train.py : 使用YOLO训练，待优化修改参数
+- cars.yaml : 数据集路径和类别，YOLO会调用
+
 ### 贡献原则
 
 - 最新以及最终版本的code保存在main branch  
