@@ -2,7 +2,7 @@ path: ../datasets/cars  # dataset root dir
 train: images/train  # train images (relative to path) 1280*720 images
 val: images/val # val images (relative to path) 1280*720 images
 test:  # test images (optional)
-# nc: 22
+# nc: 23
 
 # Classes
 names:
@@ -28,3 +28,4 @@ names:
   19: PersonSitting
   20: CampusBus
   21: MMcar
+  22: RideZebra
