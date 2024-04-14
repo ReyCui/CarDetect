@@ -7,6 +7,8 @@ from PIL import Image
 from ultralytics import YOLO
 import cv2
 import tempfile
+import os
+import glob
 
 # 模型路径
 # 获取当前文件的绝对路径
@@ -19,19 +21,20 @@ if root_path not in sys.path:
     sys.path.append(str(root_path))
 # 获取根目录相对于当前工作目录的绝对路径
 root = root_path.relative_to(Path.cwd())
+print(root)
 
 # 深度学习模型配置
 Detection_model_dir = root / 'weights' / 'detection'
 Segmentation_model_dir = root / 'weights' / 'segmentation'
 Pose_model_dir = root / 'weights' / 'pose'
-YOLOv8n = Detection_model_dir / "yolov8n.pt"
-YOLOv8s = Detection_model_dir / "yolov8s.pt"
-YOLOv8m = Detection_model_dir / "yolov8m.pt"
-YOLOv8l = Detection_model_dir / "yolov8l.pt"
-YOLOv8x = Detection_model_dir / "yolov8x.pt"
-Detection_model_list = ["yolov8n.pt", "yolov8s.pt", "yolov8m.pt", "yolov8l.pt", "yolov8x.pt"]
-Segmentation_model_list = ["yolov8n-seg.pt", "yolov8s-seg.pt", "yolov8m-seg.pt", "yolov8l-seg.pt", "yolov8x-seg.pt"]
-Pose_model_list = ["yolov8n-pose.pt", "yolov8s-pose.pt", "yolov8m-pose.pt", "yolov8l-pose.pt", "yolov8x-pose.pt"]
+#自动读取模型目录下的所有.pt文件
+Detection_model_names=[file.name for file in Detection_model_dir.glob('*.pt')]
+Segmentation_model_names=[file.name for file in Segmentation_model_dir.glob('*.pt')]
+Pose_model_names=[file.name for file in Pose_model_dir.glob('*.pt')]
+
+Detection_model_list = Detection_model_names
+Segmentation_model_list = Segmentation_model_names
+Pose_model_list = Pose_model_names
 
 
 # 加载模型
@@ -158,7 +161,9 @@ model_path = ""
 if model_type:
     if task_type == "Detection":
         model_path = Path(Detection_model_dir, str(model_type))
-        print(f"检测：{model_type}")
+        print(f"任务类型：{model_type}")
+        print(f"模型目录：{Detection_model_dir}")
+        print(f"模型路径：{model_path}")
     elif task_type == "Segment":
         model_path = Path(Segmentation_model_dir, str(model_type))
     elif task_type == "Pose":
