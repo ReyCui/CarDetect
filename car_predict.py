@@ -35,10 +35,10 @@ def xywh2xyxy(x, y, w, h):
     height = 720
     xcenter = x * width
     ycenter = y * height
-    x1 = xcenter - w * width / 2
-    y1 = ycenter - h * height / 2
-    x2 = xcenter + w * width / 2
-    y2 = ycenter + h * height / 2
+    x1 = round(xcenter - w * width / 2, 1)
+    y1 = round(ycenter - h * height / 2, 1)
+    x2 = round(xcenter + w * width / 2, 1)
+    y2 = round(ycenter + h * height / 2, 1)
     return x1, y1, x2, y2
     
 
@@ -57,8 +57,9 @@ def txt2json(txt_path, json_path):
                 if line:
                     line = line.strip().split(' ')
                     one = {}
-                    one['filename'] = txt
-                    one['conf'] = float(line[5])                
+                    txt_name = txt.split('.')[0] + '.jpg'
+                    one['filename'] = 'test_images\\' + txt_name
+                    one['conf'] = round(float(line[5]), 2)                
                     id = int(line[0])
                     one['label'] = dict_name[id]
                     x = float(line[1])
@@ -74,17 +75,18 @@ def txt2json(txt_path, json_path):
 if __name__ == '__main__':
 
     # 请修改为最新路径
-    best_weight = "./runs/detect/train/weights/best.pt"
+    best_weight = "./runs/detect/train3/weights/best.pt"
     test_images = "./datasets/cars/images/test/"
 
     # 模型预测
     model = YOLO(model=best_weight)
     model.predict(source=test_images, save_txt=True, save_conf=True)
 
-    # 预测结果路径
+    # 预测结果输出路径
     txt_path = "./runs/detect/predict/labels"
     json_path = "./output/output_dets.json"
 
+    # 把结果转成json格式
     txt2json(txt_path, json_path)
 
     # 输出json文件，并提交官网查看分数
