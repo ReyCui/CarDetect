@@ -75,7 +75,7 @@ def txt2json(txt_path, json_path):
 if __name__ == '__main__':
 
     # 请修改为最新路径
-    best_weight = "./runs/detect/train3/weights/best.pt"
+    best_weight = "./runs/detect/train/weights/best.pt"
     test_images = "./datasets/cars/images/test/"
 
     # 模型预测
