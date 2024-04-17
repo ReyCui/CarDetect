@@ -1,0 +1,103 @@
+训练集统计结果:
+
+训练集中各类别数量：
+Car: 7367
+LightTruck: 328
+LargeBus: 900
+van: 1167
+Truck: 1359
+Pedestrian: 1467
+TricycleClosed: 139
+Pickup: 256
+Motorcycle: 237
+HeavyTruck: 1270
+MotorCyclist: 2812
+EngineTruck: 201
+BiCyclist: 243
+TricycleOpenMotor: 227
+Bike: 43
+TricycleOpenHuman: 33
+Machineshop: 65
+OtherCar: 13
+MediumBus: 19
+PersonSitting: 11
+CampusBus: 1
+MMcar: 10
+
+训练集总对象数量: 18168
+
+训练集中各类别比例：
+Car: 40.55%
+LightTruck: 1.81%
+LargeBus: 4.95%
+van: 6.42%
+Truck: 7.48%
+Pedestrian: 8.07%
+TricycleClosed: 0.77%
+Pickup: 1.41%
+Motorcycle: 1.30%
+HeavyTruck: 6.99%
+MotorCyclist: 15.48%
+EngineTruck: 1.11%
+BiCyclist: 1.34%
+TricycleOpenMotor: 1.25%
+Bike: 0.24%
+TricycleOpenHuman: 0.18%
+Machineshop: 0.36%
+OtherCar: 0.07%
+MediumBus: 0.10%
+PersonSitting: 0.06%
+CampusBus: 0.01%
+MMcar: 0.06%
+
+验证集统计结果:
+
+验证集中各类别数量：
+Car: 1826
+van: 260
+LightTruck: 61
+LargeBus: 229
+MotorCyclist: 740
+Motorcycle: 58
+Pedestrian: 341
+Machineshop: 14
+BiCyclist: 65
+Truck: 272
+TricycleClosed: 45
+Bike: 11
+EngineTruck: 56
+Pickup: 70
+HeavyTruck: 300
+OtherCar: 8
+TricycleOpenMotor: 53
+PersonSitting: 3
+MediumBus: 5
+TricycleOpenHuman: 3
+CampusBus: 1
+MMcar: 6
+
+验证集总对象数量: 4427
+
+验证集中各类别比例：
+Car: 41.25%
+van: 5.87%
+LightTruck: 1.38%
+LargeBus: 5.17%
+MotorCyclist: 16.72%
+Motorcycle: 1.31%
+Pedestrian: 7.70%
+Machineshop: 0.32%
+BiCyclist: 1.47%
+Truck: 6.14%
+TricycleClosed: 1.02%
+Bike: 0.25%
+EngineTruck: 1.26%
+Pickup: 1.58%
+HeavyTruck: 6.78%
+OtherCar: 0.18%
+TricycleOpenMotor: 1.20%
+PersonSitting: 0.07%
+MediumBus: 0.11%
+TricycleOpenHuman: 0.07%
+CampusBus: 0.02%
+MMcar: 0.14%
