@@ -1,0 +1,31 @@
+path: ../datasets/cars_v2  # dataset root dir
+train: images/train  # train images (relative to path) 1280*720 images
+val: images/val # val images (relative to path) 1280*720 images
+test:  # test images (optional)
+# nc: 23
+
+# Classes
+names:
+  0: Car
+  1: LightTruck
+  2: LargeBus
+  3: van
+  4: Truck
+  5: Pedestrian
+  6: TricycleClosed
+  7: Pickup
+  8: Motorcycle
+  9: HeavyTruck
+  10: MotorCyclist
+  11: EngineTruck
+  12: Machineshop
+  13: BiCyclist
+  14: TricycleOpenMotor
+  15: Bike
+  16: TricycleOpenHuman
+  17: OtherCar
+  18: MediumBus
+  19: PersonSitting
+  20: CampusBus
+  21: MMcar
+  22: RideZebra
