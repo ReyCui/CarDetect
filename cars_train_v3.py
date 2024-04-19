@@ -3,7 +3,7 @@ from ultralytics import YOLO
 if __name__ == '__main__':
 
     # 从配置文件，从零初始化一个对象
-    model = YOLO(model="test_yolov8s.yaml")
+    model = YOLO(model="test_yolov8m.yaml")
 
     # Train the model
     # results = model.train(data='cars.yaml', epochs=10, imgsz=1280, batch=8)
