@@ -4,9 +4,16 @@
 
 ### 使用方法
 
+- env_init.ipynb：初始化环境
+- voc2yolo.py：比赛图片转成YOLO格式
 - datasets文件夹 : 数据集
-- cars_train.py : 使用YOLO训练，待优化修改参数
-- cars.yaml : 数据集路径和类别，YOLO会调用
+  - cars：测试集
+  - cars_v2: 包含手动收集图片的训练集和验证集
+  - cars_v3：原始数据集的训练集和验证集 
+- cars_train.py : 使用YOLO训练，可调整参数
+- cars.yaml : 数据集路径和类别，YOLO调用
+- cars_predict.py 推理并转成json格式文件
+- app：部署文件
 
 ### 贡献原则
 
